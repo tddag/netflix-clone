@@ -3,7 +3,10 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import prismadb from '../../lib/prismadb'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+    
     console.log("Register point 1")
+    console.log(process.env.NODE_ENV)
+    console.log(prismadb)
     if (req.method !== 'POST') {
         return res.status(405).end();
     }
