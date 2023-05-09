@@ -33,7 +33,6 @@ export const authOptions: AuthOptions = {
                 }
             },
             async authorize(credentials) {
-                console.log("Api-auth-...nextauth-credentials-authorize")
                 if (!credentials?.email || !credentials?.password) {
                     throw new Error('Email and password required');
                 }
