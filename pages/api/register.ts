@@ -3,11 +3,14 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import prismadb from '../../lib/prismadb'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+    console.log("Register point 1")
     if (req.method !== 'POST') {
         return res.status(405).end();
     }
-
+    console.log("Register point 2")
     try {
+        
+        console.log("Register point 3")        
         const { email, name, password } = req.body
 
         const existingUser = await prismadb.user.findUnique({
@@ -15,6 +18,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 email,
             }
         })
+        console.log("Register point 4")        
 
         if (existingUser) {
             return res.status(422).json({
@@ -22,7 +26,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             })
         }
 
+        console.log("Register point 5")        
+
         const hashedPassword = await bcrypt.hash(password, 12)
+
+        console.log("Register point 6")        
 
         const user = await prismadb.user.create({
             data: {
@@ -33,6 +41,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 emailVerified: new Date()
             }
         })
+        console.log("Register point 7")                
 
         return res.status(200).json(user)
     } catch (error) {   
