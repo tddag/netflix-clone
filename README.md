@@ -1,6 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### Live Demo 
+
+https://td-netflixapp.vercel.app/
+
+
+<img width="600" alt="chatAppFirebase" src="https://github.com/tddag/netflix-clone/assets/34137087/b805d582-6d69-409d-9bdb-5d1c0cc3d365"/>
+
+
 
 ## Getting Started
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+
 
 First, run the development server:
 
