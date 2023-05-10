@@ -31,6 +31,18 @@ const Auth = () => {
         }
     }, [email, password]) 
 
+    const loginAsGuest = useCallback(async() => {
+        try {
+            await signIn('credentials', {
+                email: "guest@gmail.com", 
+                password: "guest",
+                callbackUrl: '/profiles'
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }, [])
+
     const register = useCallback(async() => {
         try {
             await axios.post('/api/register', {
@@ -98,13 +110,22 @@ const Auth = () => {
                                 <FaGithub size={30}/>
                             </div>                            
                         </div>
-                        <p className="text-neutral-500 mt-12">
+                        <div className="text-neutral-500 mt-12">
                             { variant === 'login' ? 'First time using Netflix?' : 'Already have an account?'}
                             <span onClick={toggleVariant} className="text-white ml-1 hover:underline cursor-pointer">
-                                { variant === 'login' ? 'Create a account' : 'Login'}
+                                { variant === 'login' ? 'Create an account' : 'Login'}
                             </span>
+                            { variant === 'login' ? (
+                                <div className="text-center">
+                                    or
+                                    <span onClick={loginAsGuest} className="text-white ml-1 hover:underline cursor-pointer">
+                                        Login as Guest
+                                    </span>  
+                                </div>
+                              
+                            ) : (<></>)}
 
-                        </p>
+                        </div>
                     </div>
 
                 </div>
