@@ -1,17 +1,103 @@
-### Live Demo 
+### Live Demo
 
 https://td-netflixapp.vercel.app/
 
-
 <img width="600" alt="chatAppFirebase" src="https://github.com/tddag/netflix-clone/assets/34137087/b805d582-6d69-409d-9bdb-5d1c0cc3d365"/>
 
+# Setup
 
+- Install [Node](https://nodejs.org/en/download/)
+- Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- Clone the repository `https://github.com/tddag/messenger-clone-app`
+- Install dependencies `npm install`
+- Set up MongoDB
+- Setup environment variables:
+  - <table>
+        <tr>
+            <th>Variable</th>
+            <th>Value</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>DATABASE_URL</td>
+            <td>mongodb+srv:/....</td>
+            <td>MongoDB URL</td>
+        </tr>
+        <tr>
+            <td>NEXTAUTH_JWT_SECRET</td>
+            <td>.....</td>
+            <td>JWT Authentication Secret Key</td>
+        </tr>
+        <tr>
+            <td>NEXTAUTH_SECRET</td>
+            <td>.....</td>
+            <td>Authentication Secret Key</td>
+        </tr>
+        <tr>
+            <td>GITHUB_ID</td>
+            <td>b3510....</td>
+            <td>Github Authentication ID</td>
+        </tr>
+        <tr>
+            <td>GITHUB_SECRET</td>
+            <td>f214b2e4....</td>
+            <td>Github Authentication Secret</td>
+        </tr>
+        <tr>
+            <td>GOOGLE_CLIENT_ID</td>
+            <td>23701....</td>
+            <td>Google Authentication ID</td>
+        </tr>
+        <tr>
+            <td>GOOGLE_CLIENT_SECRET</td>
+            <td>GOCSP....</td>
+            <td>Google Authentication Secret</td>
+        </tr>                                                   
+    </table>
+- Run the application `npm run dev`
+
+# Functionalities
+
+- User Authentication
+  - <table>
+        <tr>
+            <td><img src="./screenshots/authentication_1.png" alt="authentication_1"></td>
+            <td><img src="./screenshots/authentication_2.png" alt="authentication_2"></td>
+            <td><img src="./screenshots/authentication_3.png" alt="authentication_3"></td>
+        </tr>
+    </table>
+- Movie Listing, Random Billboard
+  - <table>
+        <tr>
+            <td><img src="./screenshots/listing.png" alt="listing"></td>
+        </tr>
+    </table>
+- Add to My List, Movie Info, Play Movie
+  - <table>
+        <tr>
+            <td><img src="./screenshots/movie_1.png" alt="movie_1"></td>
+            <td><img src="./screenshots/movie_2.png" alt="movie_2"></td>
+            <td><img src="./screenshots/movie_3.png" alt="movie_3"></td>
+        </tr>
+    </table>
+
+# Technologies/Libraries
+
+- NextJS: Web Framework
+- Prisma: Node.js and TypeScript ORM (Object-Relational Mapping)
+- MongoDB: database
+- TailwindCSS: CSS Framework
+- Axios: promised based HTTP client
+- Bcrypt: hashing password
+- Lodash: utility library
+- Zustand: State Mangement library
+- Typescript: static typing
+- React: Web library
+- SWR: React Hooks for Data Fetching
 
 ## Getting Started
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-
 
 First, run the development server:
 
